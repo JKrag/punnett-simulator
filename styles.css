@@ -1,0 +1,285 @@
+:root {
+  /* Main color palette */
+  --primary-color: #3a7ca5;
+  --secondary-color: #81c3d7;
+  --accent-color: #16425b;
+  --light-color: #f2f7f9;
+  --dark-color: #2c3e50;
+  
+  /* Trait color schemes */
+  --black-series-dark: #000000;  /* Black (B) */
+  --black-series-medium: #5e4b3b; /* Brown (b) */
+  --black-series-light: #9c7a5a;  /* Cinnamon (b') */
+  
+  --agouti-dark: #1e5631;  /* Agouti (A) */
+  --agouti-light: #a1cca5; /* Non-agouti (a) */
+  
+  --dilution-dark: #663399;  /* Normal (D) */
+  --dilution-light: #b19cd9; /* Diluted (d) */
+  
+  --spotting-dark: #0047ab;  /* White spotting (S) */
+  --spotting-light: #add8e6; /* No white spotting (s) */
+  
+  --length-dark: #4a4a4a;  /* Short hair (L) */
+  --length-light: #a9a9a9; /* Long hair (l) */
+  
+  /* Font settings */
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.parent-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.parent {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 6px;
+}
+
+.gene-inputs {
+  margin-bottom: 1rem;
+}
+
+.gene-group {
+  margin-bottom: 0.75rem;
+}
+
+.gene-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.allele-select {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.black-series {
+  border-left: 4px solid var(--black-series-dark);
+}
+
+.agouti-series {
+  border-left: 4px solid var(--agouti-dark);
+}
+
+.dilution-series {
+  border-left: 4px solid var(--dilution-dark);
+}
+
+.spotting-series {
+  border-left: 4px solid var(--spotting-dark);
+}
+
+.length-series {
+  border-left: 4px solid var(--length-dark);
+}
+
+.cat-preview {
+  height: 100px;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.primary-button, .secondary-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.1rem;
+}
+
+.primary-button:hover {
+  background-color: var(--accent-color);
+}
+
+.secondary-button {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  margin-right: 0.5rem;
+}
+
+.secondary-button:hover {
+  background-color: #6da8bc;
+}
+
+#calculate-btn {
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.punnett-container {
+  margin: 1rem 0 2rem 0;
+  overflow-x: auto;
+}
+
+.punnett-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.punnett-table th, .punnett-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.punnett-table th {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
+.punnett-table td {
+  background-color: white;
+}
+
+.offspring-stats {
+  margin-top: 1.5rem;
+}
+
+.phenotype-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.phenotype-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+.phenotype-description {
+  flex: 1;
+}
+
+.phenotype-probability {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.save-controls {
+  margin-bottom: 1rem;
+}
+
+.saved-settings-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.saved-setting-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.saved-setting-item:hover {
+  background-color: #f5f5f5;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid var(--secondary-color);
+  color: var(--accent-color);
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .parent-inputs {
+    flex-direction: column;
+  }
+  
+  .parent {
+    min-width: 100%;
+  }
+}

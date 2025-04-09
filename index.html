@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Genetics Punnett Square Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cat Genetics Punnett Square Simulator</h1>
+            <p>Simulate genetic inheritance in cats using Punnett squares</p>
+        </header>
+
+        <main>
+            <section class="legend-section">
+                <h2>Genetics Color Legend</h2>
+                <div id="genetics-legend" class="genetics-legend">
+                    <!-- Legend will be generated here -->
+                </div>
+            </section>
+
+            <section class="parents-section">
+                <h2>Parent Cats</h2>
+                <div class="parent-inputs">
+                    <div class="parent parent-1">
+                        <h3>Parent 1</h3>
+                        <div class="gene-inputs">
+                            <div class="gene-group">
+                                <label>Black Series (B/b/b')</label>
+                                <select id="parent1-black-allele1" class="allele-select black-series">
+                                    <option value="B">B (Black - dominant)</option>
+                                    <option value="b">b (Brown)</option>
+                                    <option value="b'">b' (Cinnamon)</option>
+                                </select>
+                                <select id="parent1-black-allele2" class="allele-select black-series">
+                                    <option value="B">B (Black - dominant)</option>
+                                    <option value="b">b (Brown)</option>
+                                    <option value="b'">b' (Cinnamon)</option>
+                                </select>
+                            </div>
+                            <div class="gene-group">
+                                <label>Agouti Series (A/a)</label>
+                                <select id="parent1-agouti-allele1" class="allele-select agouti-series">
+                                    <option value="A">A (Agouti - dominant)</option>
+                                    <option value="a">a (Non-agouti)</option>
+                                </select>
+                                <select id="parent1-agouti-allele2" class="allele-select agouti-series">
+                                    <option value="A">A (Agouti - dominant)</option>
+                                    <option value="a">a (Non-agouti)</option>
+                                </select>
+                            </div>
+                            <div class="gene-group">
+                                <label>Dilution Series (D/d)</label>
+                                <select id="parent1-dilution-allele1" class="allele-select dilution-series">
+                                    <option value="D">D (Normal - dominant)</option>
+                                    <option value="d">d (Diluted)</option>
+                                </select>
+                                <select id="parent1-dilution-allele2" class="allele-select dilution-series">
+                                    <option value="D">D (Normal - dominant)</option>
+                                    <option value="d">d (Diluted)</option>
+                                </select>
+                            </div>
+                            <div class="gene-group">
+                                <label>White Spotting Series (S/s)</label>
+                                <select id="parent1-spotting-allele1" class="allele-select spotting-series">
+                                    <option value="S">S (White spotting - dominant)</option>
+                                    <option value="s">s (No white spotting)</option>
+                                </select>
+                                <select id="parent1-spotting-allele2" class="allele-select spotting-series">
+                                    <option value="S">S (White spotting - dominant)</option>
+                                    <option value="s">s (No white spotting)</option>
+                                </select>
+                            </div>
+                            <div class="gene-group">
+                                <label>Hair Length Series (L/l)</label>
+                                <select id="parent1-length-allele1" class="allele-select length-series">
+                                    <option value="L">L (Short hair - dominant)</option>
+                                    <option value="l">l (Long hair)</option>
+                                </select>
+                                <select id="parent1-length-allele2" class="allele-select length-series">
+                                    <option value="L">L (Short hair - dominant)</option>
+                                    <option value="l">l (Long hair)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="phenotype-preview">
+                            <h4>Phenotype Preview</h4>
+                            <div id="parent1-preview" class="cat-preview"></div>
+                        </div>
+                    </div>
+
+                    <div class="parent parent-2">
+                        <h3>Parent 2</h3>
+                        <div class="gene-inputs">
+                            <div class="gene-group">
+                                <label>Black Series (B/b/b')</label>
+                                <select id="parent2-black-allele1" class="allele-select black-series">
+                                    <option value="B">B (Black - dominant)</option>
+                                    <option value="b">b (Brown)</option>
+                                    <option value="b'">b' (Cinnamon)</option>
+                                </select>
+                                <select id="parent2-black-allele2" class="allele-select black-series">
+                                    <option value="B">B (Black - dominant)</option>
+                                    <option value="b">b (Brown)</option>
+                                    <option value="b'">b' (Cinnamon)</option>
+                                </select>
+                            </div>
+                            <div class="gene-group">
+                                <label>Agouti Series (A/a)</label>
+                                <select id="parent2-agouti-allele1" class="allele-select agouti-series">
+                                    <option value="A">A (Agouti - dominant)</option>
+                                    <option value="a">a (Non-agouti)</option>
+                                </select>
+                                <select id="parent2-agouti-allele2" class="allele-select agouti-series">
+                                    <option value="A">A (Agouti - dominant)</option>
+                                    <option value="a">a (Non-agouti)</option>
+                                </select>
+                            </div>
+                            <div class="gene-group">
+                                <label>Dilution Series (D/d)</label>
+                                <select id="parent2-dilution-allele1" class="allele-select dilution-series">
+                                    <option value="D">D (Normal - dominant)</option>
+                                    <option value="d">d (Diluted)</option>
+                                </select>
+                                <select id="parent2-dilution-allele2" class="allele-select dilution-series">
+                                    <option value="D">D (Normal - dominant)</option>
+                                    <option value="d">d (Diluted)</option>
+                                </select>
+                            </div>
+                            <div class="gene-group">
+                                <label>White Spotting Series (S/s)</label>
+                                <select id="parent2-spotting-allele1" class="allele-select spotting-series">
+                                    <option value="S">S (White spotting - dominant)</option>
+                                    <option value="s">s (No white spotting)</option>
+                                </select>
+                                <select id="parent2-spotting-allele2" class="allele-select spotting-series">
+                                    <option value="S">S (White spotting - dominant)</option>
+                                    <option value="s">s (No white spotting)</option>
+                                </select>
+                            </div>
+                            <div class="gene-group">
+                                <label>Hair Length Series (L/l)</label>
+                                <select id="parent2-length-allele1" class="allele-select length-series">
+                                    <option value="L">L (Short hair - dominant)</option>
+                                    <option value="l">l (Long hair)</option>
+                                </select>
+                                <select id="parent2-length-allele2" class="allele-select length-series">
+                                    <option value="L">L (Short hair - dominant)</option>
+                                    <option value="l">l (Long hair)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="phenotype-preview">
+                            <h4>Phenotype Preview</h4>
+                            <div id="parent2-preview" class="cat-preview"></div>
+                        </div>
+                    </div>
+                </div>
+                <button id="calculate-btn" class="primary-button">Generate Punnett Square</button>
+            </section>
+
+            <section class="results-section">
+                <h2>Punnett Square Results</h2>
+                <div id="punnett-container" class="punnett-container">
+                    <!-- Punnett square will be generated here -->
+                </div>
+                <div class="offspring-stats">
+                    <h3>Offspring Probabilities</h3>
+                    <div id="offspring-stats-container"></div>
+                </div>
+            </section>
+
+            <section class="save-section">
+                <h2>Save/Load</h2>
+                <div class="save-controls">
+                    <button id="save-btn" class="secondary-button">Save Current Settings</button>
+                    <button id="load-btn" class="secondary-button">Load Saved Settings</button>
+                </div>
+                <div id="saved-settings-list" class="saved-settings-list">
+                    <!-- Saved settings will be listed here -->
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Cat Genetics Punnett Square Simulator &copy; 2025</p>
+        </footer>
+    </div>
+
+    <!-- Load JavaScript as modules -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
